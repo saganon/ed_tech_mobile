@@ -1,6 +1,7 @@
-import 'package:ed_tech_mobile/screen/on_boarding/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:ed_tech_mobile/screen/on_boarding/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           ScreenUtil.setContext(context);
           return MediaQuery(
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
-            child: widget!,
+            child: widget,
           );
         },
       ),

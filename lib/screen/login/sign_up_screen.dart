@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'package:ed_tech_mobile/constant/icons_constant.dart';
 import 'package:ed_tech_mobile/constant/image_constant.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -33,7 +34,7 @@ class _SignUpScreen extends State<SignUpScreen> {
               child: InkWell(
                 onTap: () => Navigator.of(context).pop(),
                 child: Image.asset(
-                  ImageConstant.backButton,
+                  IconsConstant.backButton,
                   width: 48.w,
                   height: 48.h,
                 ),
@@ -142,7 +143,7 @@ class _SignUpScreen extends State<SignUpScreen> {
                               color: Color.fromRGBO(190, 186, 179, 1),
                             ),
                             suffixIcon: Container(
-                              child: Image.asset(ImageConstant.hidePassword),
+                              child: Image.asset(IconsConstant.hidePassword),
                             ),
                           ),
                         ),

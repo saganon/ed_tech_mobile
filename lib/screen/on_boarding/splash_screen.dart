@@ -1,8 +1,9 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:ed_tech_mobile/constant/image_constant.dart';
 import 'package:ed_tech_mobile/screen/on_boarding/intro_screen.dart';
-import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
   @override
@@ -17,7 +18,11 @@ class SplashScreen extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       color: Colors.white,
-      child: Image.asset(ImageConstant.splashscreen),
+      child: Image.asset(
+        ImageConstant.splashscreen,
+        width: 375.w,
+        height: 326.h,
+      ),
     );
   }
 }

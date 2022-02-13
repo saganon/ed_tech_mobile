@@ -12,10 +12,14 @@ class ImageConstant {
   //login
   static const login = 'assets/image/login_assets/login.png';
   static const signup = 'assets/image/login_assets/sign_up.png';
-  static const facebook = 'assets/image/login_assets/facebook.png';
-  static const instagram = 'assets/image/login_assets/instagram.png';
-  static const google = 'assets/image/login_assets/google.png';
-  static const showPassword = 'assets/image/login_assets/open.png';
-  static const hidePassword = 'assets/image/login_assets/hide.png';
-  static const backButton = 'assets/image/login_assets/back-button.png';
+
+  //Profiles
+  static const profile = 'assets/image/profile_assets/profile.png';
+
+  //Settings
+  static const settingsProfile = 'assets/image/settings_assets/settings.png';
+
+  //Courses
+  static const course1 = 'assets/image/courses_assets/course-1.png';
+  static const course2 = 'assets/image/courses_assets/course-2.png';
 }
