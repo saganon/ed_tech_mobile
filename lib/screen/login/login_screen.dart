@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:ed_tech_mobile/constant/image_constant.dart';
+import 'package:ed_tech_mobile/constant/icons_constant.dart';
+import 'package:ed_tech_mobile/screen/home/home_screen.dart';
 import 'package:ed_tech_mobile/screen/login/sign_up_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -63,13 +65,13 @@ class _LoginScreen extends State<LoginScreen> {
                 children: [
                   Container(
                     margin: EdgeInsets.only(right: 12.w),
-                    child: Image.asset(ImageConstant.facebook),
+                    child: Image.asset(IconsConstant.facebook),
                   ),
                   Container(
                     margin: EdgeInsets.only(right: 12.w),
-                    child: Image.asset(ImageConstant.instagram),
+                    child: Image.asset(IconsConstant.instagram),
                   ),
-                  Image.asset(ImageConstant.google),
+                  Image.asset(IconsConstant.google),
                 ],
               ),
             ),
@@ -120,7 +122,7 @@ class _LoginScreen extends State<LoginScreen> {
                           color: Color.fromRGBO(190, 186, 179, 1),
                         ),
                         suffixIcon: Container(
-                          child: Image.asset(ImageConstant.showPassword),
+                          child: Image.asset(IconsConstant.showPassword),
                         ),
                       ),
                     ),
@@ -150,7 +152,7 @@ class _LoginScreen extends State<LoginScreen> {
               child: ElevatedButton(
                 onPressed: () => Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
                 ),
                 style: ElevatedButton.styleFrom(
                   primary: Color.fromRGBO(227, 86, 42, 1),

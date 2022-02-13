@@ -1,7 +1,9 @@
-import 'package:ed_tech_mobile/constant/image_constant.dart';
-import 'package:ed_tech_mobile/screen/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:ed_tech_mobile/constant/image_constant.dart';
+import 'package:ed_tech_mobile/screen/login/login_screen.dart';
 
 const introContent = [
   {
@@ -41,19 +43,21 @@ class _IntroScreen extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          Container(
-            alignment: Alignment.center,
-            color: Colors.white,
-            child: Container(
-              margin: EdgeInsets.only(bottom: 144.0),
-              child: _renderSwiper(),
+      body: SafeArea(
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Container(
+              alignment: Alignment.center,
+              color: Colors.white,
+              child: Container(
+                margin: EdgeInsets.only(bottom: 144.0.w),
+                child: _renderSwiper(),
+              ),
             ),
-          ),
-          _renderButton(),
-        ],
+            _renderButton(),
+          ],
+        ),
       ),
     );
   }
@@ -91,12 +95,12 @@ class _IntroScreen extends State<IntroScreen> {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(left: 32, right: 32, top: 16),
+              margin: EdgeInsets.only(left: 32.w, right: 32.w, top: 16.h),
               alignment: Alignment.center,
               child: Text(
                 item['title'],
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   color: Color.fromRGBO(60, 58, 54, 1),
                   fontFamily: 'Rubik-Medium',
                 ),
@@ -105,12 +109,12 @@ class _IntroScreen extends State<IntroScreen> {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(left: 32, right: 32, top: 8),
+              margin: EdgeInsets.only(left: 32.w, right: 32.w, top: 8.h),
               alignment: Alignment.center,
               child: Text(
                 item['subTitle'],
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   fontFamily: 'Rubik-Regular',
                 ),
                 textAlign: TextAlign.center,
@@ -126,13 +130,13 @@ class _IntroScreen extends State<IntroScreen> {
       bottom: true,
       child: Container(
         margin: EdgeInsets.only(
-          left: 32.0,
-          right: 32.0,
-          bottom: 16.0,
-          top: 29.0,
+          left: 32.0.w,
+          right: 32.0.w,
+          bottom: 16.0.h,
+          top: 29.0.h,
         ),
         width: MediaQuery.of(context).size.width,
-        height: 56.0,
+        height: 56.0.h,
         child: ElevatedButton(
           onPressed: () => Navigator.pushReplacement(
             context,
@@ -148,7 +152,7 @@ class _IntroScreen extends State<IntroScreen> {
             _isLastScreen ? 'Let’s Start' : 'Next',
             style: TextStyle(
               fontFamily: 'Rubik',
-              fontSize: 16.0,
+              fontSize: 16.0.sp,
               color: Color.fromRGBO(255, 255, 255, 1),
             ),
           ),

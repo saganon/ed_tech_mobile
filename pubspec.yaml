@@ -18,7 +18,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -46,8 +46,16 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/icons/common_assets/
+    - assets/icons/login_assets/
+    - assets/icons/home_assets/
+    - assets/icons/settings_assets/
+    - assets/icons/courses_assets/
     - assets/image/on_boarding_assets/
     - assets/image/login_assets/
+    - assets/image/profile_assets/
+    - assets/image/settings_assets/
+    - assets/image/courses_assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
