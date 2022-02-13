@@ -1,4 +1,5 @@
 import 'package:ed_tech_mobile/constant/image_constant.dart';
+import 'package:ed_tech_mobile/screen/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
@@ -133,7 +134,10 @@ class _IntroScreen extends State<IntroScreen> {
         width: MediaQuery.of(context).size.width,
         height: 56.0,
         child: ElevatedButton(
-          onPressed: () => {},
+          onPressed: () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => LoginScreen()),
+          ),
           style: ElevatedButton.styleFrom(
             primary: Color.fromRGBO(227, 86, 42, 1),
             shape: RoundedRectangleBorder(
